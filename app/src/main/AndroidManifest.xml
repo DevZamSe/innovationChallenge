@@ -17,9 +17,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".presenter.Productos"></activity>
-        <activity android:name=".view.Denuncia" />
-        <activity android:name=".view.Register" />
+        <activity android:name=".view.Recarga"></activity>
+        <activity android:name=".view.Scan" />
+        <activity
+            android:name=".view.Login"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".presenter.Productos"
+            android:screenOrientation="portrait" />
         <activity android:name=".view.Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

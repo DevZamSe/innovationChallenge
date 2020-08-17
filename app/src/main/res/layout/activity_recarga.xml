@@ -4,6 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.Register">
+    tools:context=".view.Recarga">
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:backgroundTint="@color/colorPrimary"
+        android:background="@drawable/ic_circle"
+        android:text="@string/pagar"
+        android:onClick="mercadopago"
+        android:textColor="@color/blanco"
+        android:fontFamily="@font/convergence" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

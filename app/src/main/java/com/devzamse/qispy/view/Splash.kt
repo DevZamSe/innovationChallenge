@@ -14,7 +14,7 @@ class Splash : AppCompatActivity() {
         setContentView(R.layout.activity_splash)
 
         Handler().postDelayed({
-            val i = Intent(this, MapsActivity::class.java)
+            val i = Intent(this, Login::class.java)
             startActivity(i)
         },1200)
 

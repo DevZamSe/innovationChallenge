@@ -9,6 +9,8 @@ import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
+import com.devzamse.qispy.view.Recarga
+import com.devzamse.qispy.view.Scan
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
@@ -70,10 +72,19 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney))
     }
 
-    fun call(view: View) {
+    /*fun call(view: View) {
         val callIntent: Intent = Intent(Intent.ACTION_CALL)
         callIntent.setData(Uri.parse("tel:123456789"))
         startActivity(callIntent)
+    }*/
+
+    fun scan(view: View) {
+        val i: Intent = Intent(this, Scan::class.java)
+        startActivity(i)
+    }
+    fun recarga(view: View) {
+        val i: Intent = Intent(this, Recarga::class.java)
+        startActivity(i)
     }
 
 }
