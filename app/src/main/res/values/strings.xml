@@ -11,5 +11,18 @@
     <string name="olvidaste_la_contrase_a">Olvidaste la contraseña?</string>
     <string name="iniciar_sesi_n">Iniciar Sesión</string>
     <string name="saldo_restante_s_20_00">Saldo restante: S/ 20.00</string>
-    <string name="pagar">Pagar</string>
+    <string name="pagar">Recargar</string>
+    <string name="ingrese_un_monto_a_recargar">Ingrese un monto a recargar:</string>
+    <string name="_10_00">S/ 100.00</string>
+    <string name="saldo_actual_s_22_50">Saldo Actual: S/ 22.50</string>
+    <string name="historial_de_viajes">Historial de Viajes</string>
+    <string name="s_19_50">S/ 19.50</string>
+    <string name="viajes_realizados">Núm de Viajes</string>
+    <string name="hoy">Hoy</string>
+    <string name="ayer">Ayer</string>
+    <string name="_11_02am">11:02am</string>
+    <string name="s_1_70">S/ 1.70</string>
+    <string name="ahorro">Ahorro:</string>
+    <string name="s_18_30">+S/ 18.30</string>
+    <string name="_18">18</string>
 </resources>

@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
+import com.devzamse.qispy.MapsActivity
 import com.devzamse.qispy.R
 import com.google.zxing.integration.android.IntentIntegrator
 
@@ -21,12 +22,16 @@ class Scan : AppCompatActivity() {
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, intent: Intent?) {
         super.onActivityResult(requestCode, resultCode, intent)
-        val scanResult =
-            IntentIntegrator.parseActivityResult(requestCode, resultCode, intent)
+     /*   val scanResult = IntentIntegrator.parseActivityResult(requestCode, resultCode, intent)
         if (scanResult != null) {
             val re = scanResult.contents
-            Log.d("code", re)
+            Log.e("resultado", re.toString())
         }
         // else continue with any other code you need in the method
+*/    }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+
     }
 }
