@@ -1,5 +1,6 @@
 package com.devzamse.qispy.view
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
@@ -21,4 +22,5 @@ class Recarga : AppCompatActivity() {
             .build()
             .startPayment(this, 1)
     }
+
 }
