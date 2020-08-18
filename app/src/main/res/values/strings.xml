@@ -25,4 +25,11 @@
     <string name="ahorro">Ahorro:</string>
     <string name="s_18_30">+S/ 18.30</string>
     <string name="_18">18</string>
+    <string name="nombre_de_la_empresa_la_40_sac">Nombre de la empresa: La 40 SAC</string>
+    <string name="aforo_30_asientos">Aforo: 30 asientos</string>
+    <string name="asientos_libres_18_asientos_libres">Asientos libres: 15 asientos libres</string>
+    <string name="tarifa_s_1_30">Tarifa: S/ 1.30</string>
+    <string name="_29">50%</string>
+    <string name="_4_viajes">4 viajes</string>
+    <string name="informaci_n_del_bus">Información del bus:</string>
 </resources>

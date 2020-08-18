@@ -17,6 +17,7 @@ import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
+import com.google.zxing.integration.android.IntentIntegrator
 
 
 class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
@@ -81,6 +82,9 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
     fun scan(view: View) {
         val i: Intent = Intent(this, Scan::class.java)
         startActivity(i)
+
+//        val integrator = IntentIntegrator(this)
+//        integrator.initiateScan()
     }
     fun recarga(view: View) {
         val i: Intent = Intent(this, Recarga::class.java)
