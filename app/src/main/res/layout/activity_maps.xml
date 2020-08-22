@@ -10,15 +10,18 @@
         android:id="@+id/map"
         android:name="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="-28dp"
+        tools:layout_editor_absoluteY="250dp" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout9"
         android:layout_width="0dp"
         android:layout_height="80dp"
-        android:background="@drawable/ic_curve"
-        android:backgroundTint="@color/colorPrimary"
         android:layout_margin="30dp"
         android:layout_marginTop="20dp"
+        android:background="@drawable/ic_curve"
+        android:backgroundTint="@color/colorPrimary"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -28,10 +31,10 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/saldo_restante_s_20_00"
             android:fontFamily="@font/convergence"
-            android:textSize="20sp"
+            android:text="@string/saldo_restante_s_20_00"
             android:textColor="@color/blanco"
+            android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -39,33 +42,52 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <ImageView
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:background="@drawable/ic_circle"
-        android:contentDescription="@string/agregar_denuncia"
-        android:layout_marginBottom="20dp"
-        android:padding="15dp"
-        android:onClick="scan"
-        android:src="@drawable/qr"
-        app:layout_constraintBottom_toTopOf="@+id/imageView"
-        app:layout_constraintEnd_toEndOf="@+id/imageView"
-        app:tint="@color/blanco" />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="20dp"
-        android:background="@drawable/ic_circle"
-        android:contentDescription="@string/llamar_ahora"
-        android:onClick="recarga"
-        android:padding="12dp"
-        android:src="@drawable/ic_baseline_attach_money_24"
+
+    <com.getbase.floatingactionbutton.FloatingActionsMenu
+        android:id="@+id/grupoFab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/ic_baseline_add_24"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:tint="@color/blanco" />
+        app:fab_labelStyle="@style/etiqueta"
+        app:fab_addButtonColorNormal="@color/colorPrimary">
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fire"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_size="normal"
+            app:fab_icon="@drawable/ic_fire"
+            app:fab_colorPressed="#ccc"
+            app:fab_colorNormal="@color/colorPrimary"
+            app:fab_title="Mapa Termico"/>
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/qr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_size="normal"
+            app:fab_icon="@drawable/qr"
+            app:fab_colorPressed="#ccc"
+            app:fab_colorNormal="@color/colorPrimary"
+            app:fab_title="Scan QR"/>
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/recarga"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_size="normal"
+            app:fab_icon="@drawable/ic_baseline_attach_money_24"
+            app:fab_colorPressed="#ccc"
+            app:fab_colorNormal="@color/colorPrimary"
+            app:fab_title="Recargar"/>
+
+    </com.getbase.floatingactionbutton.FloatingActionsMenu>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
