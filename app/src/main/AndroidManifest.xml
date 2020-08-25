@@ -17,7 +17,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".view.Recarga"></activity>
+        <activity android:name=".view.ChatBot"></activity>
+        <activity android:name=".view.Recarga" />
         <activity android:name=".view.Scan" />
         <activity
             android:name=".view.Login"

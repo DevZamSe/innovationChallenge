@@ -11,6 +11,7 @@ import android.view.View
 import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.devzamse.qispy.view.ChatBot
 import com.devzamse.qispy.view.Recarga
 import com.devzamse.qispy.view.Scan
 import com.devzamse.qispy.view.Splash
@@ -34,6 +35,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
     private lateinit var mMap: GoogleMap
     private lateinit var fire: FloatingActionButton
     private lateinit var qr: FloatingActionButton
+    private lateinit var bot: FloatingActionButton
     private lateinit var recarga: FloatingActionButton
     private lateinit var mProvider: HeatmapTileProvider
     private lateinit var mOverlay: TileOverlay
@@ -49,6 +51,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         fire = findViewById(R.id.fire)
         qr = findViewById(R.id.qr)
         recarga = findViewById(R.id.recarga)
+        bot = findViewById(R.id.bot)
 
         fire.setOnClickListener {
             click++
@@ -60,10 +63,14 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         }
         qr.setOnClickListener {
             IntentIntegrator(this).setBeepEnabled(true).setOrientationLocked(true).initiateScan()
-
         }
         recarga.setOnClickListener {
             val i: Intent = Intent(this, Recarga::class.java)
+            startActivity(i)
+        }
+
+        bot.setOnClickListener {
+            val i: Intent = Intent(this, ChatBot::class.java)
             startActivity(i)
         }
 
@@ -74,7 +81,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         mMap = googleMap
         mMap.isMyLocationEnabled = true
 
-        val sydney = LatLng(-12.068516, -76.937517)
+        val sydney = LatLng(-12.068516,-76.937517)
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(sydney, 17f))
         val marker = mMap.addMarker(MarkerOptions().position(sydney).title("Información del bus"))
         marker.setIcon(BitmapDescriptorFactory.fromResource(R.drawable.bus))

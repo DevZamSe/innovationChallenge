@@ -28,17 +28,40 @@
         app:layout_constraintWidth_percent=".8"
         tools:targetApi="lollipop">
 
-        <TextView
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/convergence"
-            android:text="@string/saldo_restante_s_20_00"
-            android:textColor="@color/blanco"
-            android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/convergence"
+                android:text="@string/saldo_restante_s_20_00"
+                android:textColor="@color/blanco"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:fontFamily="@font/convergence"
+                android:text="S/. 20.00"
+                android:textColor="@color/blanco"
+                android:textSize="25sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textView15"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -85,6 +108,16 @@
             app:fab_colorPressed="#ccc"
             app:fab_colorNormal="@color/colorPrimary"
             app:fab_title="Recargar"/>
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/bot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_size="normal"
+            app:fab_icon="@drawable/ic_chat"
+            app:fab_colorPressed="#ccc"
+            app:fab_colorNormal="@color/colorPrimary"
+            app:fab_title="Chat"/>
 
     </com.getbase.floatingactionbutton.FloatingActionsMenu>
 
